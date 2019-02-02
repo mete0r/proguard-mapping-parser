@@ -22,6 +22,7 @@ from __future__ import absolute_import
 from __future__ import print_function
 from __future__ import unicode_literals
 from argparse import ArgumentParser
+from pprint import pprint
 import gettext
 import logging
 import os.path
@@ -33,7 +34,10 @@ try:
 except ImportError:
     argcomplete = None
 
+from parsec import ParseError
+
 from . import __version__
+from .parser import classMappings
 
 PY3 = sys.version_info.major == 3
 logger = logging.getLogger(__name__)
@@ -46,17 +50,30 @@ else:
     _ = t.ugettext
 
 
-def main():
+def dump():
     gettext.gettext = t.gettext
-    parser = main_argparse()
+    parser = dump_argparse()
     if argcomplete:
         argcomplete.autocomplete(parser)
     args = parser.parse_args()
     configureLogging(args.verbose)
     logger.info('args: %s', args)
 
+    text = sys.stdin.read()
+    try:
+        parsed = classMappings.parse(text)
+    except ParseError as e:
+        logger.error('expected: %r', e.expected)
+        logger.error('text:     %r', e.text)
+        logger.error('index:    %r', e.index)
+        logger.error('%s', e.text)
+        logger.error('%s^', ' ' * e.index)
+    else:
+        pprint(parsed)
+        logger.info('mappings: %d', len(parsed))
 
-def main_argparse():
+
+def dump_argparse():
     parser = ArgumentParser()
     parser.add_argument(
         '--version',

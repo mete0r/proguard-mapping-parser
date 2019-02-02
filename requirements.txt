@@ -4,3 +4,5 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
+attrs==18.2.0
+parsec==3.4

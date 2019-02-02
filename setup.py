@@ -113,7 +113,6 @@ setup_info = {
 
     'packages': [
         'proguard_mapping_parser',
-        'proguard_mapping_parser.recipe',
     ],
     # do not use '.'; just omit to specify setup.py directory
     'package_dir': {
@@ -141,16 +140,13 @@ setup_info = {
     },
     'entry_points': {
         'console_scripts': [
-            'proguard-mapping-parser = proguard_mapping_parser.cli:main',
+            'proguard-mapping-parser-dump = proguard_mapping_parser.cli:dump',
         ],
         'zc.buildout': [
-            'default = proguard_mapping_parser.recipe:Recipe',
         ],
         'zc.buildout.uninstall': [
-            'default = proguard_mapping_parser.recipe:uninstall',
         ],
         'paste.app_factory': [
-            'main = proguard_mapping_parser.wsgi:app_factory',
         ],
     },
     'classifiers': [

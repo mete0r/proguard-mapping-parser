@@ -5,11 +5,11 @@
 #    pip-compile --output-file requirements/test.txt requirements/setup.in requirements/test.in requirements.in
 #
 atomicwrites==1.2.1       # via pytest
-attrs==18.2.0             # via pytest
+attrs==18.2.0
 babel==2.6.0
 coverage==4.5.1
-funcsigs==1.0.2           # via pytest
 more-itertools==4.3.0     # via pytest
+parsec==3.4
 pathlib2==2.3.2           # via pytest
 pluggy==0.8.0             # via pytest
 py==1.7.0                 # via pytest
