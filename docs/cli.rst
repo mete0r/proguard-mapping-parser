@@ -1,10 +1,10 @@
 Command-line interface
 ======================
 
-METE0R-PROJECT
+proguard-mapping-parser
 --------------
 
 .. argparse::
-   :module: METE0R_PACKAGE.cli
+   :module: proguard_mapping_parser.cli
    :func: main_argparse
-   :prog: METE0R-PROJECT
+   :prog: proguard-mapping-parser

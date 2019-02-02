@@ -23,9 +23,9 @@ include requirements/test.txt
 include requirements/setup.in
 include tox.ini
 include virtualenv_support/README.rst
-include src/METE0R_PACKAGE/locale/METE0R-PROJECT.pot
-include src/METE0R_PACKAGE/locale/*/LC_MESSAGES/*.po
-exclude src/METE0R_PACKAGE/locale/*/LC_MESSAGES/*.mo
+include src/proguard_mapping_parser/locale/proguard-mapping-parser.pot
+include src/proguard_mapping_parser/locale/*/LC_MESSAGES/*.po
+exclude src/proguard_mapping_parser/locale/*/LC_MESSAGES/*.mo
 recursive-include docs *.bat
 recursive-include docs *.py
 recursive-include docs *.rst

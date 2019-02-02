@@ -1,12 +1,12 @@
 [run]
 branch = True
-source = METE0R_PACKAGE
+source = proguard_mapping_parser
 
 [paths]
 source =
-	src/METE0R_PACKAGE
-	.tox/*/lib/python*/site-packages/METE0R_PACKAGE
-	.tox/pypy*/site-packages/METE0R_PACKAGE
+	src/proguard_mapping_parser
+	.tox/*/lib/python*/site-packages/proguard_mapping_parser
+	.tox/pypy*/site-packages/proguard_mapping_parser
 
 
 [html]

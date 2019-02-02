@@ -1,19 +1,21 @@
 # -*- coding: utf-8 -*-
 #
-#   METE0R-PROJECT: SOME_DESCRIPTION
-#   Copyright (C) 2015-2017 mete0r <mete0r@sarangbang.or.kr>
+#   proguard-mapping-parser: ProGuard's mapping.txt parser
+#   Copyright (C) 2015-2019 mete0r <mete0r@sarangbang.or.kr>
+#
+#   This file is part of proguard-mapping-parser.
 #
 #   This program is free software: you can redistribute it and/or modify
-#   it under the terms of the GNU Affero General Public License as published by
+#   it under the terms of the GNU Lesser General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
 #   (at your option) any later version.
 #
 #   This program is distributed in the hope that it will be useful,
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#   GNU Affero General Public License for more details.
+#   GNU Lesser General Public License for more details.
 #
-#   You should have received a copy of the GNU Affero General Public License
+#   You should have received a copy of the GNU Lesser General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 from __future__ import with_statement
@@ -68,7 +70,7 @@ def readfile(path):
 
 @setup_dir
 def get_version():
-    source = readfile('src/METE0R_PACKAGE/__init__.py')
+    source = readfile('src/proguard_mapping_parser/__init__.py')
     version_match = re.search(r'^__version__ = [\'"]([^\'"]*)[\'"]',
                               source, re.M)
     if not version_match:
@@ -98,30 +100,30 @@ tests_require = readfile('requirements/test.in')
 
 
 setup_info = {
-    'name': 'METE0R-PROJECT',
+    'name': 'proguard-mapping-parser',
     'version': get_version(),
-    'description': 'SOME_DESCRIPTION',
+    'description': 'ProGuard\'s mapping.txt parser',
     'long_description': '\n'.join([readfile('README.rst'),
                                    readfile('CHANGES.rst')]),
 
     'author': 'mete0r',
     'author_email': 'mete0r@sarangbang.or.kr',
-    'license': 'GNU Affero General Public License v3 or later (AGPLv3+)',
-    # 'url': 'https://github.com/mete0r/METE0R-PROJECT',
+    'license': 'GNU Lesser General Public License v3 or later (LGPLv3+)',
+    # 'url': 'https://github.com/mete0r/proguard-mapping-parser',
 
     'packages': [
-        'METE0R_PACKAGE',
-        'METE0R_PACKAGE.recipe',
+        'proguard_mapping_parser',
+        'proguard_mapping_parser.recipe',
     ],
     # do not use '.'; just omit to specify setup.py directory
     'package_dir': {
         '': 'src',
     },
     'package_data': {
-        'METE0R_PACKAGE': [
+        'proguard_mapping_parser': [
             'locale/*/*/*.mo',
         ],
-        # 'METE0R_PACKAGE.tests': [
+        # 'proguard_mapping_parser.tests': [
         #   'files/*',
         # ],
     },
@@ -133,28 +135,28 @@ setup_info = {
     },
     'setup_requires': setup_requires,
     'message_extractors': {
-        'src/METE0R_PACKAGE': [
+        'src/proguard_mapping_parser': [
             ('**.py', 'python', None),
         ]
     },
     'entry_points': {
         'console_scripts': [
-            'METE0R-PROJECT = METE0R_PACKAGE.cli:main',
+            'proguard-mapping-parser = proguard_mapping_parser.cli:main',
         ],
         'zc.buildout': [
-            'default = METE0R_PACKAGE.recipe:Recipe',
+            'default = proguard_mapping_parser.recipe:Recipe',
         ],
         'zc.buildout.uninstall': [
-            'default = METE0R_PACKAGE.recipe:uninstall',
+            'default = proguard_mapping_parser.recipe:uninstall',
         ],
         'paste.app_factory': [
-            'main = METE0R_PACKAGE.wsgi:app_factory',
+            'main = proguard_mapping_parser.wsgi:app_factory',
         ],
     },
     'classifiers': [
         'Development Status :: 1 - Planning',
         # 'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',  # noqa
+        'License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)',  # noqa
         # 'Operating System :: OS Independent',
         # 'Programming Language :: Python',
         # 'Programming Language :: Python :: 2.7',

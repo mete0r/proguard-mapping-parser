@@ -1,29 +1,29 @@
-# Korean translations for METE0R-PROJECT.
+# English translations for proguard-mapping-parser.
 # Copyright (C) 2016-2017 mete0r@sarangbang.or.kr
 # This file is distributed under the same license as the
-# METE0R-PROJECT project.
+# proguard-mapping-parser project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: METE0R-PROJECT 0.0.0\n"
+"Project-Id-Version: proguard-mapping-parser 0.0.0\n"
 "Report-Msgid-Bugs-To: mete0r@sarangbang.or.kr\n"
 "POT-Creation-Date: 2018-10-27 14:32+0900\n"
 "PO-Revision-Date: 2016-02-27 19:35+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ko\n"
-"Language-Team: ko <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: src/METE0R_PACKAGE/cli.py:63
+#: src/proguard_mapping_parser/cli.py:63
 msgid "output version information and exit"
-msgstr "버전 정보를 출력하고 끝냅니다"
+msgstr ""
 
-#: src/METE0R_PACKAGE/cli.py:68
+#: src/proguard_mapping_parser/cli.py:68
 msgid "increase verbosity"
-msgstr "로그 출력 수준을 높입니다"
+msgstr ""
 

@@ -1,7 +1,7 @@
-METE0R-PROJECT
+proguard-mapping-parser
 ==============
 
-SOME_DESCRIPTION
+ProGuard's mapping.txt parser
 
 
 Production environment

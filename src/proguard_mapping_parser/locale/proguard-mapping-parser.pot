@@ -1,13 +1,13 @@
-# Translations template for METE0R-PROJECT.
+# Translations template for proguard-mapping-parser.
 # Copyright (C) 2018 mete0r@sarangbang.or.kr
-# This file is distributed under the same license as the METE0R-PROJECT
+# This file is distributed under the same license as the proguard-mapping-parser
 # project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: METE0R-PROJECT 0.0.0\n"
+"Project-Id-Version: proguard-mapping-parser 0.0.0\n"
 "Report-Msgid-Bugs-To: mete0r@sarangbang.or.kr\n"
 "POT-Creation-Date: 2018-10-27 14:32+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: src/METE0R_PACKAGE/cli.py:63
+#: src/proguard_mapping_parser/cli.py:63
 msgid "output version information and exit"
 msgstr ""
 
-#: src/METE0R_PACKAGE/cli.py:68
+#: src/proguard_mapping_parser/cli.py:68
 msgid "increase verbosity"
 msgstr ""
 
